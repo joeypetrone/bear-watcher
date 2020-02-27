@@ -6,7 +6,6 @@ const getBears = () => {
 
 const setBears = (bearObject) => {
     bears.push(bearObject);
-    console.log(bears);
 };
 
 export default { getBears, setBears };

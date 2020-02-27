@@ -1,5 +1,6 @@
 import bearsData from '../helpers/data/bearsData.js'
-
+import river from '../components/river.js'
+import util from '../helpers/util.js'
 
 const addBear = (e) => {
     e.preventDefault();
@@ -10,7 +11,7 @@ const addBear = (e) => {
     bearsData.setBears({name: bearName, imageURL: bearImageURL })
 
     document.getElementById('bear-form').reset();
-
+    river.printAllBears();
 };
 
 
