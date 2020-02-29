@@ -7,7 +7,7 @@ const printBearForm = () => {
 
     domString += '<div id="form" class="d-flex justify-content-center">';
     domString += '   <div class="from">';
-    domString += '      <h5>Add Bear</h5>';
+    domString += '      <h6 class="pl-2">Add Bear</h6>';
     domString += '      <form id="bear-form" class="form-inline">';
     domString += '          <label class="sr-only" for="inlineFormInputName2">Bear Name</label>';
     domString += '          <input type="text" class="form-control mb-2 mr-sm-2" id="bear-name" placeholder="Bear Name">';      
@@ -28,7 +28,9 @@ const addBear = (e) => {
     const bearName = document.getElementById('bear-name').value;
     const bearImageURL = document.getElementById('bear-image').value;
 
-    bearsData.setBears({name: bearName, imageURL: bearImageURL })
+    bearsData.setBears({name: bearName, imageURL: bearImageURL, id: `bear_${bearsData.getBears().length + 1}` })
+
+    console.log(bearsData.getBears()[0].id);
 
     document.getElementById('bear-form').reset();
     river.printAllBears();
