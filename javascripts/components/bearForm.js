@@ -1,4 +1,3 @@
-import bearsData from '../helpers/data/bearsData.js'
 import river from '../components/river.js'
 import util from '../helpers/util.js'
 
@@ -22,23 +21,4 @@ const printBearForm = () => {
     util.printToDom('bear-form-container', domString);
 };
 
-const addBear = (e) => {
-    e.preventDefault();
-
-    const bearName = document.getElementById('bear-name').value;
-    const bearImageURL = document.getElementById('bear-image').value;
-
-    bearsData.setBears({name: bearName, imageURL: bearImageURL, id: `bear_${bearsData.getBears().length + 1}` })
-
-    console.log(bearsData.getBears()[0].id);
-
-    document.getElementById('bear-form').reset();
-    river.printAllBears();
-};
-
-
-const submitBearEvent = () => {
-    document.getElementById('bear-button').addEventListener('click', addBear);
-};
-
-export default { printBearForm, submitBearEvent };
+export default { printBearForm };
