@@ -16,11 +16,14 @@ const addBear = (e) => {
 };
 
 const fishAttempt = (e) => {
-    console.log('in fishAttempt');
-    //const bearId = e.target.id; 
-    //const bearPosition = bearsData.getBears().findIndex((p) => p.id === bearId);
+    const bearId = e.target.id; 
+    const bearsArray = bearsData.getBears();
+    const bearPosition = bearsArray.findIndex((p) => p.id === bearId);
 
-    alert(`${bearsData.getBears()[bearPosition]} attepmted to catch a fish.`);
+    console.log(bearPosition);
+    console.log(bearsArray.name);
+
+    alert(`${bearsArray[bearPosition].name} attepmted to catch a fish.`);
 };
 
 const init = () => {
