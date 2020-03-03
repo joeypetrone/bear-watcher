@@ -15,9 +15,18 @@ const addBear = (e) => {
     river.printAllBears();
 };
 
+const fishAttempt = (e) => {
+    console.log('in fishAttempt');
+    //const bearId = e.target.id; 
+    //const bearPosition = bearsData.getBears().findIndex((p) => p.id === bearId);
+
+    alert(`${bearsData.getBears()[bearPosition]} attepmted to catch a fish.`);
+};
+
 const init = () => {
     bearForm.printBearForm();
     $('#bear-button').click(addBear);
+    $('#river').on('click', '.fish-attempt-button', fishAttempt);
 };
 
 init();
