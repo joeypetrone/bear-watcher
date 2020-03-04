@@ -1,4 +1,4 @@
-# Dino Kennel
+# Bear Watcher
 
 ## Description 
 This project is used to show javascript modules. It is designed to be a record keeping application for a bears catching fish.
