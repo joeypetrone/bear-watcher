@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+body {
+    background-color: aliceblue;
+
+    .navbar {
+      font-family: 'Seaweed Script';
+
+      .navbar-brand {
+        font-size: 25px;
+    }  
+  }
+}
